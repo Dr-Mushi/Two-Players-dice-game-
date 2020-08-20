@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>DICE Game</title>
+    <style>
+        body {
+            background: #a59072;
+        }
+
+        .sub-header {
+            font-weight: bolder;
+            font-size: larger;
+        }
+
+        .data {
+            font-weight: bolder;
+            font-size: large;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
+</head>
+
+<body>
+    <!--wrapper-->
+    <div class="container player-panel-wrapper border border-dark rounded">
+        <!-- start grid inside wrapper -->
+        <div class="row">
+            <!-- first player info -->
+            <div class="col-6 player-info border border-dark" id="player-0-info">
+                <div class="sub-header" id="player-0">PLAYER 1</div>
+                <div class="data" id="score-0">43</div>
+                <div class="sub-header" id="current">CURRENT</div>
+                <div class="data" id="current-0-score">11</div>
+            </div>
+            <!-- second player info -->
+            <div class="col-6 text-right player-info border border-dark " id="player-1-info">
+                <div class="sub-header" id="player-1">PLAYER 2</div>
+                <div class="data" id="score-1">72</div>
+                    <div class="sub-header" id="current">CURRENT</div>
+                    <div class="data" id="current-1-score">0</div>
+            </div>
+            <!-- wrapper for final score input -->
+            <div class="col-12 final-score-wrapper">
+                <div class="row">
+                    <!-- new game button -->
+                    <div class="col-12   text-center new-game">
+                        <p>
+                            <button id="btn-new" class="widget ion-ios-plus-outline"><span class="iconify" data-icon="mdi-light:power" data-inline="false" height = 25></span>NEW GAME</button>
+                        </p>
+                    </div>
+                    <!-- text input -->
+                    <div class="col-12  text-center score-input">
+                        <p>
+                            <input type="number" min="1" max="100" step="1" id="final-score" value="20">
+                            <button id="btn-final-score"><span class="iconify" data-icon="mdi-light:play" data-inline="false" height = 25></span>ENTER FINAL SCORE</button>
+                        </p>
+                    </div>
+                </div>
+                <!-- second row to wrapp dices and dice controllers -->
+                <div class="row">
+                    <!-- wrapper for two dice images -->
+                    <div class="col-xl-12 col-lg-12 col-md-12 text-center dices-wrapper">
+                        <!-- first dice -->
+                        <div class="widget" id="dices1">
+                            <p>
+                                <img src="images/dice-1.png" width = "200" height = "200" class="dice">
+                            </p>
+                        </div>
+                        <!-- second dice -->
+                        <div class="widget" id="dices2">
+                            <p>
+                                <img src="images/dice-1.png" width = "200" height = "200" class="dice2">
+                            </p>
+                        </div>
+                    </div>
+                    <!-- wrapper that has two buttons -->
+                    <div class="col-12 text-center dice-controllers">
+                        <!-- first button to roll dice -->
+                        <p>
+                            <button id="btn-dice" class="widget ion-ios-loop"><span class="iconify" data-icon="mdi-light:plus-circle" data-inline="false" height="25"></span>ROLL DICE</button>
+                        </p>
+                        <!-- second button to hold score -->
+                        <p>
+                            <button id="btn-hold" class="widget ion-bag"><span class="iconify" data-icon="mdi-light:arrow-up-circle" data-inline="false" height = "25" ></span>HOLD</button>
+                        </p>
+                    </div>
+                    <!-- end of inside row div -->
+                </div>
+            </div>
+            <!-- end of row div -->
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/@popperjs/core/dist/umd/popper-base.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+<script src="app.js"></script>
+
+
+</html>
